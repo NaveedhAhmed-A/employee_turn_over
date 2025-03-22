@@ -1,7 +1,6 @@
 import json
 import pickle,pandas as pd
 from sklearn.metrics import accuracy_score, f1_score,precision_score,log_loss, confusion_matrix
-# Load test data
 test = pd.read_csv(r"D:\MLOPS ASS=1\test.csv, index=False")
 X_test = test.drop(columns=["left"])  # Drops the "left" column to keep features
 y_test = test["left"]  # Target variable
