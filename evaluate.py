@@ -8,7 +8,6 @@ results = {}
 for model_name, model_file in [("RandomForest", r"D:\MLOPS ASS=1\random_forest.pkl"), ("LogReg", r"D:\MLOPS ASS=1\logistic_regression.pkl")]:
     with open(model_file, "rb") as f:
         model = pickle.load(f)
-
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred)
